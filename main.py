@@ -1,4 +1,4 @@
-import pygame
+import pygame,circleshape, player
 from constants import *
 
 def main():
@@ -13,7 +13,9 @@ def main():
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				return
-			
+
+		player(SCREEN_WIDTH/2,SCREEN_HEIGHT/2)
+		player.draw(screen)
 		screen.fill("black")
 		pygame.display.flip()
 		dt = clock.tick(60) /1000
